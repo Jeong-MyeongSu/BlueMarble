@@ -1,0 +1,45 @@
+
+살 의사가 있는가? yes  (num = 1)
+살 땅이 있는가? flag중 0 이 있어야됨
+돈이 있는가?
+
+
+땅 7 13 20
+    1  0  1
+ex)19원이 있으면 살수 있어야됨
+ex)8원이 있으면  살수 없어야됨
+landinfo[position].vhflag == 0 && (landinfo[position].vacationhome * (-(landinfo[position].vhflag - 1)))  <= ***cash    ||   
+landinfo[position].bdflag == 0 && (landinfo[position].building * (-(landinfo[position].bdflag - 1)))   <= ***cash        ||
+landinfo[position].htflag == 0 &&(landinfo[position].hotel * (-(landinfo[position].htflag- 1)))         <= ***cash        
+
+else{
+ 살수 있는 땅이 없습니다.
+}
+
+땅 7  13 20
+   0    0  1
+
+ex)8원 있으면 살수 있어야됨
+ex)6원 있으면 살수 없어야됨
+
+(landinfo[position].vacationhome * (-(landinfo[position].vhflag - 1)))  < ***cash    ||
+(landinfo[position].building * (-(landinfo[position].bdflag - 1)))   < ***cash        ||
+(landinfo[position].hotel * (-(landinfo[position].htflag- 1)))         < ***cash        
+
+
+0  1
+0  0
+1  1
+
+41-19
+2
+
+플 1 로 전주, 광주, 서귀포, 세종 안사고 확인
+플 2 로 대구  확인
+
+
+5 11 18
+34
+9 19 30
+58 + 34  92
+400 - 92 = 3-9
